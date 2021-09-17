@@ -10,6 +10,38 @@
     <script src="https://kit.fontawesome.com/4ceb06085e.js" crossorigin="anonymous"></script><script src="//pull.cappuccicons.com/cpf.js"></script>
  </head>
 
+   <script>
+    $('.altsh-ucp').click(function(){
+    $('.altsh-toggle').slideToggle('500');
+    $(this).find('span').toggleClass('th-chevron-down th-chevron-up')
+});
+
+
+$(document).ready(function () {
+var length = $('#altsh-sticky-rel').height() - $('#altsh-sticky-stuck').height() + $('#altsh-sticky-rel').offset().top;
+$(window).scroll(function () {
+var scroll = $(this).scrollTop();
+var height = $('#altsh-sticky-stuck').height() + 'px';
+if (scroll < $('#altsh-sticky-rel').offset().top) {
+$('#altsh-sticky-stuck').css({
+'position': 'relative',
+'top': '0'
+});
+} else {
+$('#altsh-sticky-stuck').css({
+'position': 'fixed',
+'top': '0',
+'height': height
+});}});});
+
+
+
+
+function toggleMenu(e) {
+  e.classList.toggle("active");
+  document.querySelector(".alth-toggle-bg").classList.toggle("active");
+}
+  </script>
 
 <div style="margin: auto; width: 1021px;">      
   
@@ -22,7 +54,7 @@
 <div class="alth-toggle" onclick="toggleMenu(this)"><span class="th th-plus-1" title="toggle"></span></div>
   
   <div class="alth-toggle-bg">
-   <div class="alth-news"><span>month ##</span>
+   <div class="alth-news"><span>month 00</span>
      <div class="alth-news-txt-bg"><div class="alth-news-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et pharetra odio. Morbi iaculis porta est, vitae dignissim augue accumsan in. Class aptent taciti sociosqu ad litora torquent per conubia nostra. Mauris sit amet mi bibendum.
         </div></div></div>
     
@@ -1661,39 +1693,6 @@ align-items: center;}
    </style>
 	  
 	  
-	     <script>
-    $('.altsh-ucp').click(function(){
-    $('.altsh-toggle').slideToggle('500');
-    $(this).find('span').toggleClass('th-chevron-down th-chevron-up')
-});
-
-
-$(document).ready(function () {
-var length = $('#altsh-sticky-rel').height() - $('#altsh-sticky-stuck').height() + $('#altsh-sticky-rel').offset().top;
-$(window).scroll(function () {
-var scroll = $(this).scrollTop();
-var height = $('#altsh-sticky-stuck').height() + 'px';
-if (scroll < $('#altsh-sticky-rel').offset().top) {
-$('#altsh-sticky-stuck').css({
-'position': 'relative',
-'top': '0'
-});
-} else {
-$('#altsh-sticky-stuck').css({
-'position': 'fixed',
-'top': '0',
-'height': height
-});}});});
-
-
-
-
-function toggleMenu(e) {
-  e.classList.toggle("active");
-  document.querySelector(".alth-toggle-bg").classList.toggle("active");
-}
-  </script>
-
 	     <script>
     $('.altsh-ucp').click(function(){
     $('.altsh-toggle').slideToggle('500');
