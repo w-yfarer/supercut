@@ -1248,7 +1248,7 @@ CIN / 23 / SHE + HER / EST
    
    
    
-       <div class="-" style="margin-bottom: 35px;">
+       <div class="pyxis" style="margin-bottom: 35px;">
 <div class="altpost-top">
 <span class="th th-chevron-right"></span> C://VIEWING/SYNTH/PYXIS/USER_52/DATA
 <det><i class="fas fa-minus"></i><i class="fas fa-expand"></i><i class="fas fa-times"></i></det>   </div>
@@ -1615,9 +1615,10 @@ crux { color: #b8a5c7; }
 staff {color: #d8b39a; }
 member {color: #494949; }
 
-.orion {--accent-color: #bd5c81; --accent-color-rgb: 189, 92, 129	; --group-icon: '\f10e';
+.orion {--accent-color: #bd5c81; --accent-color-rgb: 189, 92, 129; --group-icon: '\f10e';
 }
 .pyxis {--accent-color: #9271a6; --accent-color-rgb: 146, 113, 166; --group-icon: '\f109';}
+.draco {--accent-color: #E2CCA7; --accent-color-rgb: 226, 204, 167; --group-icon: '\f116';}
 
 :root {
   --accent-color: #5491b7;
@@ -2121,3 +2122,35 @@ align-items: center;}
 .altprof-icon-2 {position: absolute; right: 30px;}
 .altprof-icon-2 img {border: 1px solid #2d2d2d; padding: 16px; width: 55px; height: 55px; object-fit: cover; margin-right: 0px; background-color: #1D1D1D; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
 	</style>
+	     <script>
+    $('.altsh-ucp').click(function(){
+    $('.altsh-toggle').slideToggle('500');
+    $(this).find('span').toggleClass('th-chevron-down th-chevron-up')
+});
+
+
+$(document).ready(function () {
+var length = $('#altsh-sticky-rel').height() - $('#altsh-sticky-stuck').height() + $('#altsh-sticky-rel').offset().top;
+$(window).scroll(function () {
+var scroll = $(this).scrollTop();
+var height = $('#altsh-sticky-stuck').height() + 'px';
+if (scroll < $('#altsh-sticky-rel').offset().top) {
+$('#altsh-sticky-stuck').css({
+'position': 'relative',
+'top': '0'
+});
+} else {
+$('#altsh-sticky-stuck').css({
+'position': 'fixed',
+'top': '0',
+'height': height
+});}});});
+
+
+
+
+function toggleMenu(e) {
+  e.classList.toggle("active");
+  document.querySelector(".alth-toggle-bg").classList.toggle("active");
+}
+  </script>
